@@ -1,19 +1,19 @@
 {
   "name": "Trading Signal Robot",
   "short_name": "TSR",
-  "start_url": "./",
+  "start_url": "/entry-edge-ai/",
   "display": "standalone",
   "background_color": "#0a0a0a",
   "theme_color": "#0a0a0a",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "./icon-192.png",
+      "src": "/entry-edge-ai/icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "./icon-512.png",
+      "src": "/entry-edge-ai/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
