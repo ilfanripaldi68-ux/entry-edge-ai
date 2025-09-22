@@ -3,58 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Trading Signal Robot - AI-Powered Forex & Crypto Trading Assistant
-    </title>
-    <meta
-      name="description"
-      content="Professional Trading Signal Robot with real-time AI analysis for Forex, Metals, and Crypto. Get profitable entry signals with automated TP/SL levels and high win rates."
-    />
+    <title>Trading Signal Robot - AI-Powered Forex & Crypto Trading Assistant</title>
+    <meta name="description" content="Professional Trading Signal Robot with real-time AI analysis for Forex, Metals, and Crypto. Get profitable entry signals with automated TP/SL levels and high win rates." />
     <meta name="author" content="Trading Signal Robot" />
-    <meta
-      name="keywords"
-      content="trading signals, forex robot, crypto trading, AI trading, automated trading, technical analysis, trading bot"
-    />
+    <meta name="keywords" content="trading signals, forex robot, crypto trading, AI trading, automated trading, technical analysis, trading bot" />
 
-    <!-- PWA -->
+    <!-- PWA Configuration -->
     <meta name="theme-color" content="hsl(220, 25%, 8%)" />
-    <link rel="manifest" href="/entry-edge-ai/manifest.json" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Trading Signal Robot" />
+    <link rel="manifest" href="./manifest.json" />
 
-    <!-- OG -->
-    <meta
-      property="og:title"
-      content="Trading Signal Robot - AI-Powered Trading Assistant"
-    />
-    <meta
-      property="og:description"
-      content="Professional AI trading signals for Forex, Metals, and Crypto with real-time analysis and automated TP/SL levels."
-    />
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Trading Signal Robot - AI-Powered Trading Assistant" />
+    <meta property="og:description" content="Professional AI trading signals for Forex, Metals, and Crypto with real-time analysis and automated TP/SL levels." />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://lovable.dev/opengraph-image-p98pqg.png"
-    />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-    <!-- Twitter -->
+    <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@tradingsignalrobot" />
-    <meta
-      name="twitter:title"
-      content="Trading Signal Robot - AI-Powered Trading Assistant"
-    />
-    <meta
-      name="twitter:description"
-      content="Get profitable trading signals with AI analysis for Forex, Metals, and Crypto markets."
-    />
-    <meta
-      name="twitter:image"
-      content="https://lovable.dev/opengraph-image-p98pqg.png"
-    />
+    <meta name="twitter:title" content="Trading Signal Robot - AI-Powered Trading Assistant" />
+    <meta name="twitter:description" content="Get profitable trading signals with AI analysis for Forex, Metals, and Crypto markets." />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
   </head>
 
   <body>
     <div id="root"></div>
-    <!-- penting: jangan pakai /entry-edge-ai/ di sini -->
+    <!-- FIX: biarkan Vite handle bundle, jangan pakai /entry-edge-ai/ -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
