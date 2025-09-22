@@ -15,45 +15,30 @@
     />
 
     <!-- PWA Configuration -->
-    <meta name="theme-color" content="hsl(220, 25%, 8%)" />
+    <meta name="theme-color" content="#0a0a0a" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="Trading Signal Robot" />
-    <link rel="manifest" href="./manifest.json" />
+    <link rel="manifest" href="/entry-edge-ai/manifest.json" />
 
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Trading Signal Robot - AI-Powered Trading Assistant" />
-    <meta
-      property="og:description"
-      content="Professional AI trading signals for Forex, Metals, and Crypto with real-time analysis and automated TP/SL levels."
-    />
+    <meta property="og:description" content="Professional AI trading signals for Forex, Metals, and Crypto with real-time analysis and automated TP/SL levels." />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://lovable.dev/opengraph-image-p98pqg.png"
-    />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@tradingsignalrobot" />
-    <meta
-      name="twitter:title"
-      content="Trading Signal Robot - AI-Powered Trading Assistant"
-    />
-    <meta
-      name="twitter:description"
-      content="Get profitable trading signals with AI analysis for Forex, Metals, and Crypto markets."
-    />
-    <meta
-      name="twitter:image"
-      content="https://lovable.dev/opengraph-image-p98pqg.png"
-    />
+    <meta name="twitter:title" content="Trading Signal Robot - AI-Powered Trading Assistant" />
+    <meta name="twitter:description" content="Get profitable trading signals with AI analysis for Forex, Metals, and Crypto markets." />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
   </head>
 
   <body>
     <div id="root"></div>
-    <!-- ✅ perbaikan disini -->
+    <!-- FIX: path langsung ke src, biar Vite compile -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
