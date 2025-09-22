@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - utama   # ganti ke "main" kalau branch Anda namanya main
+      - main   # karena branch utama Anda adalah main
 
 jobs:
   build:
