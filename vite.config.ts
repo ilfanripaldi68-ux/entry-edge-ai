@@ -5,6 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: "/entry-edge-ai/", // <-- tambahkan ini (nama repo kamu)
   server: {
     host: "::",
     port: 8080,
