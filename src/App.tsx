@@ -1,27 +1,18 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
+import RealtimeChart from "./components/RealtimeChart";
 
-const queryClient = new QueryClient();
+function App() {
+  return (
+    <div className="p-6 space-y-6">
+      {/* Chart BTCUSDT */}
+      <RealtimeChart symbol="BTCUSDT" />
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+      {/* Chart ETHUSDT */}
+      <RealtimeChart symbol="ETHUSDT" />
+
+      {/* Chart Gold */}
+      <RealtimeChart symbol="XAUUSDT" />
+    </div>
+  );
+}
 
 export default App;
