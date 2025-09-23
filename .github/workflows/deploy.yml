@@ -12,11 +12,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18
-      - run: npm install
+      # install dependencies (pakai legacy-peer-deps supaya conflict react-financial-charts di-skip)
+      - run: npm install --legacy-peer-deps
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist   # <-- pastikan ambil hasil build dist
+          path: ./dist   # ambil hasil build dist
 
   deploy:
     needs: build
