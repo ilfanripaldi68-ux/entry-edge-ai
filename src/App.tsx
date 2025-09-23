@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
-import Trading from "./pages/Trading";
+import Trading from "./pages/trading";
 import Chart from "./pages/Chart";
 import Signals from "./pages/Signals";
 import History from "./pages/History";
