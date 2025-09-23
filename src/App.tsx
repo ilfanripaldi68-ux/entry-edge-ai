@@ -1,16 +1,15 @@
+// src/App.tsx
 import RealtimeChart from "./components/RealtimeChart";
 
 function App() {
   return (
-    <div className="p-6 space-y-6">
-      {/* Chart BTCUSDT */}
-      <RealtimeChart symbol="BTCUSDT" />
-
-      {/* Chart ETHUSDT */}
-      <RealtimeChart symbol="ETHUSDT" />
-
-      {/* Chart Gold */}
-      <RealtimeChart symbol="XAUUSDT" />
+    <div className="min-h-screen flex items-center justify-center bg-gray-900">
+      <div className="w-full max-w-3xl p-4">
+        <h1 className="text-xl font-bold text-white mb-4 text-center">
+          Realtime Chart Demo
+        </h1>
+        <RealtimeChart />
+      </div>
     </div>
   );
 }
