@@ -6,7 +6,7 @@ import {
   YAxis,
   Tooltip,
   CandlestickSeries,
-} from "recharts";
+} from "react-financial-charts";
 
 export default function RealtimeChart({ symbol = "BTCUSDT" }) {
   const [data, setData] = useState<any[]>([]);
