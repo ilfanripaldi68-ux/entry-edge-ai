@@ -1,16 +1,27 @@
-// src/App.tsx
-import RealtimeChart from "./components/RealtimeChart";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Sidebar from "./components/Sidebar";
+import Dashboard from "./pages/Dashboard";
+import Trading from "./pages/Trading";
+import Chart from "./pages/Chart";
+import Signals from "./pages/Signals";
+import History from "./pages/History";
 
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-900">
-      <div className="w-full max-w-3xl p-4">
-        <h1 className="text-xl font-bold text-white mb-4 text-center">
-          Realtime Chart Demo
-        </h1>
-        <RealtimeChart />
+    <Router>
+      <div className="flex">
+        <Sidebar />
+        <div className="flex-1 p-4">
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/trading" element={<Trading />} />
+            <Route path="/chart" element={<Chart />} />
+            <Route path="/signals" element={<Signals />} />
+            <Route path="/history" element={<History />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
