@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Sidebar from "./components/Sidebar";
-import Dashboard from "./pages/Dashboard";
+import Sidebar from "./components/sidebar";
+import Dashboard from "./pages/dashboard";
 import Trading from "./pages/trading";
-import Chart from "./pages/Chart";
-import Signals from "./pages/Signals";
-import History from "./pages/History";
+import Chart from "./pages/chart";
+import Signals from "./pages/signals";
+import History from "./pages/history";
 
 function App() {
   return (
@@ -13,11 +13,11 @@ function App() {
         <Sidebar />
         <div className="flex-1 p-4">
           <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/trading" element={<Trading />} />
-            <Route path="/chart" element={<Chart />} />
-            <Route path="/signals" element={<Signals />} />
-            <Route path="/history" element={<History />} />
+            <Route path="/" element={<dashboard />} />
+            <Route path="/trading" element={<trading />} />
+            <Route path="/chart" element={<chart />} />
+            <Route path="/signals" element={<signals />} />
+            <Route path="/history" element={<history />} />
           </Routes>
         </div>
       </div>
