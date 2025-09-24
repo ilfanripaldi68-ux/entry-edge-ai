@@ -22,4 +22,4 @@ export default defineConfig({
     outDir: "dist",
     emptyOutDir: true, // biar bersih setiap build
   },
-}));
+});
