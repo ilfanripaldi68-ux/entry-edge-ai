@@ -1,6 +1,6 @@
 import React from "react";
 import { HashRouter, Routes, Route, Link } from "react-router-dom";
-import Sidebar from "./components/sidebar";
+import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import ChartPage from "./pages/ChartPage";
 import Signals from "./pages/Signals";
