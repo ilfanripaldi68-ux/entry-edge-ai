@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   // penting buat GitHub Pages → sesuai nama repo
   base: "/entry-edge-ai/",
 
@@ -22,4 +22,4 @@ export default defineConfig({
     outDir: "dist",
     emptyOutDir: true, // biar bersih setiap build
   },
-});
+}));
