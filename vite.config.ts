@@ -4,13 +4,10 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  // penting buat GitHub Pages → sesuai nama repo
-  base: "/entry-edge-ai/",
+  // dev: "/" supaya localhost works. production: repo name path.
+  base: mode === "development" ? "/" : "/entry-edge-ai/",
 
-  plugins: [
-    react(),
-    mode === "development" && componentTagger()
-  ].filter(Boolean),
+  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
 
   resolve: {
     alias: {
@@ -20,6 +17,6 @@ export default defineConfig(({ mode }) => ({
 
   build: {
     outDir: "dist",
-    emptyOutDir: true, // biar bersih setiap build
+    emptyOutDir: true,
   },
 }));
