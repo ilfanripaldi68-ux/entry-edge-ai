@@ -1,28 +1,26 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from "react";
+import { HashRouter, Routes, Route, Link } from "react-router-dom";
 import Sidebar from "./components/sidebar";
-import Dashboard from "./pages/dashboard";
-import Trading from "./pages/trading";
-import Chart from "./pages/chart";
-import Signals from "./pages/signals";
-import History from "./pages/history";
+import Dashboard from "./pages/Dashboard";
+import ChartPage from "./pages/ChartPage";
+import Signals from "./pages/Signals";
+import History from "./pages/History";
 
-function App() {
+export default function App() {
   return (
-    <Router>
-      <div className="flex">
+    <HashRouter>
+      <div style={{ display: "flex", minHeight: "100vh" }}>
         <Sidebar />
-        <div className="flex-1 p-4">
+        <main style={{ flex: 1, padding: 24 }}>
           <Routes>
-            <Route path="/" element={<dashboard />} />
-            <Route path="/trading" element={<trading />} />
-            <Route path="/chart" element={<chart />} />
-            <Route path="/signals" element={<signals />} />
-            <Route path="/history" element={<history />} />
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/chart" element={<ChartPage />} />
+            <Route path="/signals" element={<Signals />} />
+            <Route path="/history" element={<History />} />
+            <Route path="*" element={<div>Oops — halaman gak ketemu</div>} />
           </Routes>
-        </div>
+        </main>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
-
-export default App;
