@@ -1,9 +1,8 @@
-name: Deploy Vite App to GitHub Pages
+name: Deploy ke GitHub Pages
 
 on:
   push:
-    branches: [ "main" ]
-  workflow_dispatch:
+    branches: ["main"]
 
 jobs:
   build:
@@ -11,26 +10,25 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-      - name: Install dependencies
-        run: npm install
-      - name: Build
-        run: npm run build
+
+      - name: Build project
+        run: |
+          # langkah build project kamu
+          mkdir public
+          echo "Halo GitHub Pages!" > public/index.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: ./public
 
   deploy:
-    needs: build
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
+    needs: build
+    environment:
+      name: github-pages   # 👈 WAJIB ADA
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy
-        uses: actions/deploy-pages@v4
+      - name: Deploy ke GitHub Pages
         id: deployment
+        uses: actions/deploy-pages@v4
