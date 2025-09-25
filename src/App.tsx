@@ -1,26 +1,26 @@
-import React from "react";
-import { HashRouter, Routes, Route, Link } from "react-router-dom";
-import Sidebar from "./components/Sidebar";
+import React, { useState } from "react";
+import Sidebar from "./components/layout/Sidebar";
+import Navbar from "./components/layout/Navbar";
 import Dashboard from "./pages/Dashboard";
-import ChartPage from "./pages/ChartPage";
-import Signals from "./pages/Signals";
-import History from "./pages/History";
+import TradingPanel from "./pages/TradingPanel";
+import Settings from "./pages/Settings";
 
 export default function App() {
+  const [route, setRoute] = useState<"dashboard" | "trading" | "settings">(
+    "dashboard"
+  );
+
   return (
-    <HashRouter>
-      <div style={{ display: "flex", minHeight: "100vh" }}>
-        <Sidebar />
-        <main style={{ flex: 1, padding: 24 }}>
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/chart" element={<ChartPage />} />
-            <Route path="/signals" element={<Signals />} />
-            <Route path="/history" element={<History />} />
-            <Route path="*" element={<div>Oops — halaman gak ketemu</div>} />
-          </Routes>
+    <div className="flex h-screen">
+      <Sidebar active={route} onNavigate={(r) => setRoute(r)} />
+      <div className="flex-1 flex flex-col">
+        <Navbar />
+        <main className="p-4 overflow-auto">
+          {route === "dashboard" && <Dashboard />}
+          {route === "trading" && <TradingPanel />}
+          {route === "settings" && <Settings />}
         </main>
       </div>
-    </HashRouter>
+    </div>
   );
 }
