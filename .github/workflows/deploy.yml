@@ -3,7 +3,6 @@ name: Deploy ke GitHub Pages
 on:
   push:
     branches: ["main"]
-  workflow_dispatch:
 
 jobs:
   build:
@@ -34,7 +33,10 @@ jobs:
     permissions:
       pages: write
       id-token: write
+    environment:
+      name: github-pages   # ⬅️ WAJIB ADA!
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy ke GitHub Pages
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
